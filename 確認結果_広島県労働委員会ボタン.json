@@ -1,0 +1,12 @@
+{
+  "unified_heading_present": true,
+  "checkoff_button_present": true,
+  "benri_button_present": true,
+  "old_checkoff_heading_remaining": false,
+  "old_benri_heading_remaining": false,
+  "removed_benri_count": 1,
+  "removed_checkoff_count": 1,
+  "tabs_present": true,
+  "rinji_pdf_link_present": true,
+  "cert_pages_present": true
+}

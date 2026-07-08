@@ -1,0 +1,13 @@
+{
+  "sharoushi_page_exists": true,
+  "rireki_page_exists": true,
+  "shikaku_page_exists": true,
+  "sharoushi_button_present": true,
+  "rireki_button_page_link": true,
+  "shikaku_button_page_link": true,
+  "benri_independent_present": true,
+  "benri_button_in_old_block_removed_count": 2,
+  "hiroshima_325547_link_present": true,
+  "tabs_present": true,
+  "rinji_pdf_link_present": true
+}
