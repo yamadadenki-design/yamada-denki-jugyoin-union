@@ -21,7 +21,7 @@ img{max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:10px;backg
     <a class="btn" href="../index.html">戻る</a>
   </div>
   <div class="box">
-    <img src="image_03.png" alt="法適合組合資格証明書">
+    <img src="image_01.png" alt="法適合組合資格証明書">
   </div>
 </div>
 </body>
