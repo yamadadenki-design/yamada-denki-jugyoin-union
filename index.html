@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ヤマダデンキ従業員組合</title>
 <style>
@@ -150,6 +151,22 @@ ul{padding-left:20px;margin:8px 0}
   }
 }
 
+/* 労務監査案内：既存の紹介・法人情報から独立した追加欄 */
+.labor-audit-card{border:2px solid #b9cee6;overflow:hidden;padding:0}
+.labor-audit-head{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 24px;background:linear-gradient(135deg,#102b4e,#245b9e);color:#fff}
+.labor-audit-head h3{margin:0;color:#fff;font-size:clamp(21px,3vw,27px)}
+.labor-audit-law{flex:none;padding:6px 11px;border:1px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(255,255,255,.12);font-size:12px;font-weight:800}
+.labor-audit-body{padding:24px}.labor-audit-lead{color:#173b68;font-size:clamp(17px,2.3vw,21px);font-weight:800;line-height:1.75}
+.labor-audit-points{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.labor-audit-point{padding:16px 8px;border:1px solid #d7e2ee;border-radius:14px;background:#f8fbff;text-align:center;color:#203c61;font-weight:800}
+.labor-audit-point span{display:block;margin-bottom:7px;font-size:26px;line-height:1}
+.labor-audit-quote{padding:17px 19px;border-left:5px solid #245b9e;border-radius:0 11px 11px 0;background:#f3f7fc;color:#334155}
+.labor-audit-strength{margin-top:17px;padding:16px 18px;border:1px solid #cbdced;border-radius:12px;background:#edf5ff;color:#1e3a5f}
+.labor-audit-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.labor-audit-links .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px}
+.labor-audit-links .official-btn{background:#245b9e;color:#fff;border-color:#245b9e}.labor-audit-note{margin-top:11px;color:#64748b;font-size:12px}
+@media(max-width:900px){.labor-audit-head{display:block}.labor-audit-law{display:inline-block;margin-top:10px}.labor-audit-points{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.labor-audit-points{grid-template-columns:1fr}.labor-audit-links .btn{width:100%}}
+
 
 </style>
 </head>
@@ -229,6 +246,18 @@ ul{padding-left:20px;margin:8px 0}
         </div>
       </div>
 
+      <div class="card section labor-audit-card" aria-labelledby="labor-audit-title">
+        <div class="labor-audit-head"><h3 id="labor-audit-title">社会保険労務士による「労務監査」の専門性</h3><span class="labor-audit-law">社会保険労務士法 第2条第1項第3号</span></div>
+        <div class="labor-audit-body">
+          <p class="labor-audit-lead">法令だけでなく、労働協約・就業規則・労働契約が守られているかを確認する専門資格です。</p>
+          <div class="labor-audit-points" aria-label="労務監査の確認対象"><div class="labor-audit-point"><span>⚖</span>法令</div><div class="labor-audit-point"><span>🤝</span>労働協約</div><div class="labor-audit-point"><span>📘</span>就業規則</div><div class="labor-audit-point"><span>✍</span>労働契約</div></div>
+          <div class="labor-audit-quote">令和7年（2025年）の社会保険労務士法改正により、社会保険労務士の業務に、事業における労務管理その他の労働に関する事項および社会保険に関する事項について、法令ならびに労働協約、就業規則および労働契約の遵守状況を監査する「労務監査」が含まれることが明記されました。</div>
+          <div class="labor-audit-strength"><strong>当組合の強み：</strong>執行委員長が社会保険労務士として、労働法令と社内ルールの両面から、働く人の権利と職場の適正な運用を検証します。</div>
+          <div class="labor-audit-links"><a class="btn official-btn" href="https://www.shakaihokenroumushi.jp/" target="_blank" rel="noopener noreferrer">社会保険労務士とは</a><a class="btn" href="https://www.mhlw.go.jp/content/11200000/001529706.pdf" target="_blank" rel="noopener noreferrer">厚生労働省の改正概要PDFを見る</a></div>
+          <p class="labor-audit-note">※ 厚生労働省「社会保険労務士法の一部を改正する法律の公布等について」（令和7年6月25日）。</p>
+        </div>
+      </div>
+
 <div class="card section">
       <h3>法人情報</h3>
       <div class="corp-grid-fix">
@@ -260,10 +289,30 @@ ul{padding-left:20px;margin:8px 0}
       </div>
       <div class="notice" style="margin-top:12px;">※ 2つの証明書は、小さい画像で確認でき、ボタンまたは画像を押すと大きく表示されます。</div>
     </div>
-  </div></section>
+    </div>
+
+  </section>
 
   <section id="news" class="page hidden">
-    <div class="card"><h2>お知らせ・機関誌</h2><p class="muted">機関誌や更新情報を公開するページです。現在は、組合機関誌臨時号を掲載しています。</p></div>
+    <div class="card"><h2>お知らせ・機関誌</h2><p class="muted">機関誌や更新情報を、新しいものから順に掲載しています。</p></div>
+    <div class="card section">
+      <div class="muted">2026-08-29　<span class="pill" style="margin-left:8px;">最新</span></div>
+      <h3>準備書面から確認できる ユニオン・ショップ協定に基づく解雇説明の記載</h3>
+      <p>株式会社ヤマダホールディングス、株式会社ヤマダデンキおよびヤマダホールディングスユニオンが裁判所へ提出した準備書面において主張している内容を、該当箇所ごとに整理した資料です。</p>
+      <div class="public-box">
+        <div style="font-weight:700;">資料の主な内容</div>
+        <ul>
+          <li>原告1の正社員転換時および組合脱退時における説明の記載</li>
+          <li>原告2の新卒新入社員研修時における説明の記載</li>
+          <li>各準備書面に引用されたユニオン・ショップ条項</li>
+          <li>「解雇となる」「解雇の可能性もある」「直ちに解雇する」という文言の比較整理</li>
+        </ul>
+      </div>
+      <p>引用枠内は準備書面の原文で、赤字はユニオン・ショップ協定に基づく解雇の説明に直接当たる部分です。入社時や在職中に受けた説明、配付された書類、これまでの経験などと照らし合わせてご確認ください。</p>
+      <div class="file-links">
+        <a class="btn primary" href="union_shop_explanation.pdf" target="_blank" rel="noopener">ユニオン・ショップ協定の説明PDFを開く</a>
+      </div>
+    </div>
     <div class="card section">
       <div class="muted">2026-05-16</div>
       <h3>組合機関誌　臨時号</h3>
@@ -373,7 +422,7 @@ ul{padding-left:20px;margin:8px 0}
         </div>
       </div>
       </div>
-    
+    </div>
 
     <div class="section">
       <div class="card section">
@@ -404,9 +453,9 @@ ul{padding-left:20px;margin:8px 0}
         <div class="public-box breakall">yamadadenki@jyugyoinkumiai.net</div>
       </div>
     </div>
-    
+    </div>
 
-</section></main>
+</main>
 
 <script>
 const pages = document.querySelectorAll('.page');
@@ -554,7 +603,5 @@ window.honkiImages = {
 }
 
 </script>
-
-
-
-</body></html>
+</body>
+</html>
