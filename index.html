@@ -5,23 +5,7 @@
 <meta name="description" content="ヤマダデンキ従業員組合の公式情報サイトです。組合の活動方針、お知らせ、機関誌、労働法令・公的資料を掲載しています。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://yamada-denki-jugyoin-union.netlify.app/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="ヤマダデンキ従業員組合">
-<meta property="og:title" content="ヤマダデンキ従業員組合">
-<meta property="og:description" content="ヤマダデンキ従業員組合の公式情報サイトです。組合の活動方針、お知らせ、機関誌、労働法令・公的資料を掲載しています。">
-<meta property="og:url" content="https://yamada-denki-jugyoin-union.netlify.app/">
 <title>ヤマダデンキ従業員組合</title>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ヤマダデンキ従業員組合",
-  "url": "https://yamada-denki-jugyoin-union.netlify.app/",
-  "email": "yamadadenki@jyugyoinkumiai.net",
-  "foundingDate": "2023-05-01"
-}
-</script>
 <style>
 :root {
   --bg:#f1f5f9; --card:#fff; --text:#0f172a; --muted:#475569; --line:#cbd5e1; --accent:#0f172a; --soft:#e2e8f0; --warnbg:#fef2f2; --warnline:#fecaca; --warntext:#991b1b;
@@ -36,8 +20,8 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-
 .brand small{display:block;color:var(--muted);letter-spacing:.2em;font-weight:700}
 .brand strong{font-size:24px}
 nav{display:flex;gap:8px;flex-wrap:wrap}
-nav a{border:1px solid var(--line);background:#fff;color:var(--text);padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:700;text-decoration:none}
-nav a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+nav button{border:1px solid var(--line);background:#fff;color:var(--text);padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:700}
+nav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 main{padding:28px 0 42px}
 .grid-hero,.grid-3,.grid-2,.asset-grid{display:grid;gap:20px}
 .grid-hero{grid-template-columns:1.6fr 1fr}
@@ -69,7 +53,7 @@ ul{padding-left:20px;margin:8px 0}
 .mobile-mode .wrap{max-width:480px;padding:0 14px}
 .mobile-mode .header-inner{align-items:stretch}
 .mobile-mode nav{display:grid;grid-template-columns:1fr;gap:8px;width:100%}
-.mobile-mode nav a{width:100%;padding:14px 16px;font-size:16px}
+.mobile-mode nav button{width:100%;padding:14px 16px;font-size:16px}
 .mobile-mode h1{font-size:30px;line-height:1.35}
 .mobile-mode h2{font-size:25px}
 .mobile-mode h3{font-size:20px}
@@ -187,6 +171,13 @@ ul{padding-left:20px;margin:8px 0}
 
 
 </style>
+
+  <style>
+    @media (max-width: 700px) {
+      .title-break { display: none; }
+    }
+  </style>
+
 </head>
 <body>
 <header>
@@ -196,16 +187,17 @@ ul{padding-left:20px;margin:8px 0}
       <strong>ヤマダデンキ従業員組合</strong>
     </div>
     <nav>
-      <a class="active" href="#home" data-page="home">トップ</a>
-      <a href="#about" data-page="about">組合について</a>
-      <a href="#news" data-page="news">お知らせ</a>
-      <a href="#contact" data-page="contact">労働法令・公的資料</a>
+      <button class="" data-page="home">トップ</button>
+      <button data-page="about">組合について</button>
+      <button data-page="news" class="active">お知らせ</button>
+      <button data-page="contact" class="">労働法令・公的資料</button>
+      <button data-page="members">限定公開</button>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <section id="home" class="page">
+  <section id="home" class="page hidden">
     <div class="grid-hero">
       <div class="card">
         <div class="pill">公開版</div>
@@ -310,10 +302,40 @@ ul{padding-left:20px;margin:8px 0}
 
   </section>
 
-  <section id="news" class="page hidden">
+  <section id="news" class="page">
     <div class="card"><h2>お知らせ・機関誌</h2><p class="muted">機関誌や更新情報を、新しいものから順に掲載しています。</p></div>
     <div class="card section">
-      <div class="muted">2026-09-03　<span class="pill" style="margin-left:8px;">最新</span></div>
+      <div class="muted">2026-09-19　<span class="pill" style="margin-left:8px;">最新</span></div>
+      <div style="margin:10px 0 18px;">
+        <h3 style="margin:0 0 8px; font-size:30px; line-height:1.35; letter-spacing:.01em;">
+          組合費の「黙示の委任」について
+        </h3>
+        <div style="display:inline-block; padding-left:14px; border-left:4px solid #0f172a; color:#475569; font-size:18px; line-height:1.6; font-weight:700;">
+          会社ら・ヤマダホールディングスユニオンの主張と<br class="title-break">一審・二審判決の整理
+        </div>
+      </div>
+      <p>組合費の給与控除（チェック・オフ）について、書面による個別の支払委任がない場合でも「黙示の委任」が認められるのかという点を、株式会社ヤマダホールディングス・株式会社ヤマダデンキ、ヤマダホールディングスユニオンの各主張と、一審・二審判決に分けて整理した資料です。</p>
+      <div class="public-box">
+        <div style="font-weight:700;">資料の主な内容</div>
+        <ul>
+          <li>「支払委任」「明示の委任」「黙示の委任」の意味</li>
+          <li>会社らが、説明・組合活動・長期間の無異議などを根拠として述べた主張</li>
+          <li>ヤマダホールディングスユニオンの「個別委任は不要」「仮に必要でも黙示の委任がある」という二段階の主張</li>
+          <li>さいたま地方裁判所および東京高等裁判所が重視した事情</li>
+          <li>会社ら・ユニオンの主張と、一審・二審判決の比較整理</li>
+        </ul>
+      </div>
+      <div style="margin:14px 0 16px; padding:14px 16px; border:1px solid #cbd5e1; background:#f8fafc; border-radius:12px; color:#334155; font-size:15px; line-height:1.7;">
+        <strong>資料をご覧いただく際の注意</strong><br>
+        本資料は、裁判所へ提出された書面および判決文の内容を読みやすく整理した資料です。会社ら・ヤマダホールディングスユニオンの「主張」と、裁判所の「判断」を区別して記載しています。
+      </div>
+      <p>詳しい内容は、下のボタンからPDFでご確認いただけます。</p>
+      <div class="file-links">
+        <a class="btn primary" href="./union_fee_implied_authorization.pdf" target="_blank" rel="noopener">組合費の「黙示の委任」整理PDFを開く</a>
+      </div>
+    </div>
+    <div class="card section">
+      <div class="muted">2026-09-03</div>
       <h3>ユニオン・ショップ協定による社長宛への要請</h3>
       <div style="margin:14px 0 16px; padding:14px 16px; border:2px solid #d97706; background:#fffbeb; border-radius:12px; color:#92400e; font-size:16px; line-height:1.7; font-weight:700;">【一般公開にあたって】掲載しているPDFは、一般公開にあたり、一部編集を加えたものです。</div>
       <p>2021年2月15日付で、当時のヤマダ電機労働組合が株式会社ヤマダホールディングス代表取締役社長宛てに提出した要請書です。</p>
@@ -494,7 +516,7 @@ ul{padding-left:20px;margin:8px 0}
 
 <script>
 const pages = document.querySelectorAll('.page');
-const navButtons = document.querySelectorAll('nav [data-page]');
+const navButtons = document.querySelectorAll('nav button');
 const jumpButtons = document.querySelectorAll('[data-jump]');
 const mobileModeBtn = document.getElementById('mobileModeBtn');
 function showPage(pageId) {
@@ -502,17 +524,8 @@ function showPage(pageId) {
   navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === pageId));
   window.scrollTo({top:0, behavior:'smooth'});
 }
-navButtons.forEach(btn => btn.addEventListener('click', (event) => {
-  event.preventDefault();
-  showPage(btn.dataset.page);
-  history.replaceState(null, '', `#${btn.dataset.page}`);
-}));
+navButtons.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.page)));
 jumpButtons.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.jump)));
-
-const initialPage = location.hash.slice(1);
-if (document.getElementById(initialPage)?.classList.contains('page')) {
-  showPage(initialPage);
-}
 
 function setMobileMode(isMobileMode) {
   document.body.classList.toggle('mobile-mode', isMobileMode);
@@ -537,6 +550,44 @@ try {
   }
 } catch (e) {}
 
+const PASSWORD = 'union2026';
+const loginBtn = document.getElementById('loginBtn');
+const logoutBtn = document.getElementById('logoutBtn');
+const passwordInput = document.getElementById('passwordInput');
+const loginError = document.getElementById('loginError');
+const loginArea = document.getElementById('loginArea');
+const membersArea = document.getElementById('membersArea');
+
+if (loginBtn) {
+  loginBtn.addEventListener('click', () => {
+    if (passwordInput.value === PASSWORD) {
+      loginError.style.display = 'none';
+      loginArea.classList.add('hidden');
+      membersArea.classList.remove('hidden');
+      passwordInput.value = '';
+    } else {
+      membersArea.classList.add('hidden');
+      loginArea.classList.remove('hidden');
+      loginError.style.display = 'block';
+    }
+  });
+}
+if (passwordInput) {
+  passwordInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      loginBtn.click();
+    }
+  });
+}
+if (logoutBtn) {
+  logoutBtn.addEventListener('click', () => {
+    membersArea.classList.add('hidden');
+    loginArea.classList.remove('hidden');
+    loginError.style.display = 'none';
+    passwordInput.value = '';
+  });
+}
 </script>
 
 </body></html>
