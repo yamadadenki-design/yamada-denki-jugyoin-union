@@ -5,15 +5,19 @@ frame.addEventListener('load',()=>{
   const doc=frame.contentDocument;
   if(!doc)return;
   doc.addEventListener('click',event=>{
-    const el=event.target instanceof Element ? event.target : event.target.parentElement;
-    const link=el?.closest('a[href^="#"]');
+    const element=event.target instanceof Element ? event.target : event.target?.parentElement;
+    const link=element?.closest('a[href]');
     if(!link)return;
-    const hash=link.getAttribute('href').slice(1);
-    if(!hash)return;
-    let id;try{id=decodeURIComponent(hash)}catch{return}
-    const target=doc.getElementById(id) || doc.querySelector('[name="'+CSS.escape(id)+'"]');
-    if(target){event.preventDefault();target.scrollIntoView({block:'start',behavior:'auto'});}
-  });
+    const raw=link.getAttribute('href')||'';
+    // srcdoc inherits the parent URL as base. Fragment navigation must stay in this iframe.
+    if(!raw.startsWith('#'))return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    let id;try{id=decodeURIComponent(raw.slice(1))}catch{return}
+    if(!id)return;
+    const target=doc.getElementById(id)||Array.from(doc.getElementsByName(id))[0];
+    if(target)target.scrollIntoView({block:'start',behavior:'auto'});
+  },true);
 },{once:true});
 frame.srcdoc=revised;
 document.getElementById('archive').style.display='block';document.getElementById('gate').style.display='none';document.body.style.background='white';return true}
