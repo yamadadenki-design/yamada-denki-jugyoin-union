@@ -1,0 +1,4 @@
+Netlify設定用_暗号鍵_非公開.txt
+*.key
+.env
+.env.*
